@@ -53,7 +53,7 @@ nav::before {
 }
 
 nav > ul > li {
-  width: 33%;
+  width: 100%;
   text-align: center;
 }
 
@@ -67,6 +67,11 @@ nav > ul > li {
   font-weight: 200;
   z-index: 101;
 }
+@media only screen and (max-width: 480px) {
+  .nav-links {
+    font-size: 0.8rem;
+  }
+}
 .nav-links:hover {
   font-weight: 700;
 }
@@ -78,6 +83,10 @@ nav > ul > li {
   position: absolute;
   width: 100%;
   overflow: hidden;
+}
+
+.about {
+  height: auto;
 }
 
 @media only screen and (max-width: 768px) {
@@ -183,10 +192,7 @@ nav > ul > li {
 .about-presentation {
   height: 100%;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 30rem;
+  padding-top: 12vh;
 }
 @media only screen and (max-width: 768px) {
   .about-presentation {
@@ -194,31 +200,35 @@ nav > ul > li {
     padding-top: 7rem;
   }
 }
-.about-presentation .inner {
+.about-presentation .slide {
+  float: left;
+  width: 30%;
+  margin: 0 1rem;
+  height: auto;
+}
+.about-presentation .slide .inner {
   width: 30rem;
   height: 30rem;
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  transform: translate(-50%, -80%);
 }
 @media only screen and (max-width: 768px) {
-  .about-presentation .inner {
+  .about-presentation .slide .inner {
     margin-bottom: -25rem;
   }
 }
-.about-presentation .inner img {
+.about-presentation .slide .inner img {
+  margin: auto;
   height: 50%;
 }
-.about-presentation .inner p {
+.about-presentation .slide .inner p {
+  margin: auto;
   width: 80%;
 }
 @media only screen and (max-width: 480px) {
-  .about-presentation .inner p {
+  .about-presentation .slide .inner p {
     width: 70%;
   }
 }
