@@ -197,6 +197,11 @@ nav > ul > li {
   width: 100%;
   padding-top: 12vh;
 }
+@media only screen and (max-width: 768px) {
+  .about-presentation {
+    flex-direction: column;
+  }
+}
 .about-presentation .slide {
   height: 88vh;
 }
